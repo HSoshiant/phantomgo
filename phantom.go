@@ -26,6 +26,7 @@ type Phantomer interface {
 	SetPhantomjsPath(string, string)
 	Download(Request) (*http.Response, error)
 	Exec(string, ...string) (io.ReadCloser, error)
+	Open(...string) (io.ReadCloser, error)
 }
 
 type Phantom struct {
